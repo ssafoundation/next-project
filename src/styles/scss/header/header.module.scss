@@ -1,0 +1,193 @@
+//==========================
+.main-header {
+  position: relative;
+  .header-inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    .header-left-logo {
+      img {
+        height: 50px;
+        width: 63px;
+      }
+    }
+    .header-right-navbar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .header-email {
+        a {
+          color: #141414;
+          text-align: right;
+          font-family: General Sans;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.24px;
+          text-decoration-line: underline;
+          text-transform: lowercase;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+      .header-menu-area-wrap {
+        display: flex;
+        button {
+          width: 36px;
+          height: 36px;
+          padding: 8px;
+          border: none;
+          background: #f64749;
+          border-radius: 50%;
+          .menu-toggle-bar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            span {
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: #fff;
+              transition: 0.4s;
+              &:first-child {
+                width: 70%;
+              }
+              &:last-child {
+                width: 70%;
+              }
+            }
+            &.hide-menu {
+              position: relative;
+              justify-content: center;
+              align-items: center;
+              span {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                position: absolute;
+                &:first-child {
+                  width: 100%;
+                  transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                  transform: rotate(-45deg);
+                }
+                &:last-child {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu-show-area {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    background: #fff;
+    transform: rotateX(90deg);
+    transform-origin: top center;
+    transition: 0.4s;
+    padding-top: 50px;
+    z-index: 99;
+    min-height: 450px;
+    &.show-menu {
+      transform: rotateX(0deg);
+    }
+    .header-navbar-show-area {
+      .header-menu-left {
+        h4 {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          &:after {
+            content: "";
+            width: 40px;
+            position: absolute;
+            height: 2px;
+            background: #f64749;
+            right: -46px;
+          }
+        }
+      }
+      .header-menu-middle {
+        display: flex;
+        justify-content: center;
+        ul {
+          padding-left: 0;
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          li {
+            a {
+              color: #141414;
+              text-decoration: none;
+              font-family: General Sans;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 150%; /* 27px */
+              letter-spacing: 0.27px;
+              &.active {
+                color: #afafaf;
+              }
+            }
+          }
+        }
+      }
+      .header-menu-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        > ul {
+          list-style: none;
+          li {
+            margin-bottom: 6px;
+            &:first-child {
+              a {
+                text-decoration: underline;
+              }
+            }
+            a {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              gap: 8px;
+              text-decoration: none;
+              color: #141414;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: 0.24px;
+              svg {
+                path {
+                  fill: #f64749;
+                }
+              }
+            }
+          }
+        }
+        .social-media-links {
+          ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
