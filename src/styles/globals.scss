@@ -1,6 +1,27 @@
 @import "https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap";
 @import "scss/header/header.module.scss";
 @import "scss/home/home.scss";
+
+//============ Custom fonts =================
+@font-face {
+  font-family: "Amsterdam One";
+  src: url("/fonts/Amsterdam-One.woff2") format("woff2"),
+    url("/fonts/Amsterdam-One.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amsterdam Two_ttf";
+  src: url("/fonts/Amsterdam-Two_ttf.woff2") format("woff2"),
+    url("/fonts/Amsterdam-Two_ttf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+//============================
 body {
   font-family: "General Sans", sans-serif;
   .text-secondary-color {

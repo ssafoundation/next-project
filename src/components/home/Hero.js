@@ -40,8 +40,12 @@ const Hero = () => {
                 </h1>
                 <h1>
                   designer
-                  <DesignerIcon />
+                  <DesignerIcon iconPosition={"icon-bottom-right"} />
                 </h1>
+                <p className="hero-left-bottom-color-info">
+                  from <span className="text-color-bangladesh">Bangladesh</span>
+                  , working <span>globally</span>.
+                </p>
               </div>
             </Col>
             <Col lg="6" className="my-auto">

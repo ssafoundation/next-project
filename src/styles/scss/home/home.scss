@@ -14,6 +14,34 @@
     z-index: -1;
   }
   .hero-left-content {
+    p {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.36px;
+      margin-bottom: 0;
+      span {
+        color: #2ec2f1;
+        &.text-color-bangladesh {
+          background: linear-gradient(
+            162deg,
+            #0fa602 0%,
+            #ca1416 63.46%,
+            #e00103 94.27%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-family: General Sans;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.36px;
+        }
+      }
+    }
     h1 {
       font-size: 90px;
       font-weight: 700;
@@ -23,14 +51,23 @@
         z-index: 2;
         svg.icon-left {
           position: relative;
-          margin-right: -20px;
+          margin-right: -16px;
+          width: 50px;
+          height: 50px;
         }
         svg.icon-right {
           margin-left: -27px;
           position: relative;
           top: -36px;
           z-index: -1;
+          width: 70px;
+          height: 70px;
         }
+      }
+      svg.icon-bottom-right {
+        height: 64px;
+        position: relative;
+        bottom: 8px;
       }
       span.hero-research-emoji {
         position: relative;
@@ -43,15 +80,219 @@
         }
       }
     }
+    p.hero-left-bottom-color-info {
+      color: #141414;
+      font-family: General Sans;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.36px;
+    }
   }
   .hero-right-content {
     position: relative;
     height: calc(100vh - 100px);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
     > svg {
       position: absolute;
     }
     img {
       width: 100%;
+      height: auto;
+    }
+    .hero-social-media {
+      display: flex;
+      justify-content: flex-end;
+      .social-media-links {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+        p {
+          margin-bottom: 0;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.21px;
+        }
+        ul {
+          display: flex;
+          padding-left: 0;
+          margin-bottom: 0;
+          list-style: none;
+          gap: 14px;
+          align-items: center;
+          li {
+            a {
+              display: block;
+              svg {
+                height: 18px;
+                path {
+                  fill: rgba(64, 64, 64, 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//============ Service ===============
+
+.service-full-area {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  .service-container-outer-wrap {
+    background: #fff;
+    width: 100%;
+    border-top: 1px solid #f4787b;
+    border-bottom: 1px solid #f4787b;
+    padding: 14px 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .service-inner-container {
+      .service-items-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+//================= Gallery =============
+.gallery-full-area {
+  .gallery-inner-container {
+    .gallery-header {
+      margin-bottom: 50px;
+      .gallery-header-top {
+        a {
+          display: inline-flex;
+          align-items: center;
+          text-decoration: none;
+          font-family: General Sans;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          color: #f64749;
+        }
+      }
+      .gallery-header-bottom {
+        text-align: center;
+        h3 {
+          color: #141414;
+          font-size: 96px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 125%; /* 120px */
+          letter-spacing: 1.44px;
+          text-transform: capitalize;
+          svg {
+            position: relative;
+            transform: rotate(47deg);
+            margin-right: -24px;
+            margin-top: -74px;
+            path {
+              fill: rgba(233, 202, 28, 1);
+            }
+          }
+        }
+        p {
+          color: #141414;
+          text-align: center;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%; /* 36px */
+          letter-spacing: 0.36px;
+          span.gallery-color-text-sub-title {
+            font-family: "Amsterdam one";
+            color: rgb(46, 194, 241);
+            font-size: 14px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .gallery-card-content-wrap {
+      .single-gallery-card {
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 24px;
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+        .g-card-bottom-area {
+          margin-top: 20px;
+          h4 {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 125%; /* 40px */
+            letter-spacing: 0.48px;
+          }
+          p {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+            letter-spacing: 0.3px;
+          }
+          a {
+            color: #f64749;
+            text-decoration: none;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 36px */
+            letter-spacing: 0.36px;
+            display: flex;
+            align-items: center;
+            svg {
+              width: 26px;
+              height: 26px;
+              position: relative;
+              top: 4px;
+            }
+          }
+        }
+      }
+      .gallery-bottom-see-more-btn {
+        text-align: center;
+        margin-top: 40px;
+        a {
+          color: #f64749;
+
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%; /* 36px */
+          letter-spacing: 0.36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 26px;
+            height: 26px;
+            position: relative;
+            top: 4px;
+          }
+        }
+      }
     }
   }
 }
