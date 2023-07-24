@@ -1,3 +1,6 @@
+import AboutDetails from "@/components/about/AboutDetails";
+import AboutExperience from "@/components/about/AboutExperience";
+import AboutHero from "@/components/about/AboutHero";
 import Layout from "@/components/layout/Layout";
 import Head from "next/head";
 
@@ -11,7 +14,9 @@ const about = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h3>About</h3>
+        <AboutHero />
+        <AboutDetails />
+        <AboutExperience />
       </Layout>
     </>
   );

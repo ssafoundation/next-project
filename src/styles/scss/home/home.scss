@@ -1,7 +1,11 @@
 //=============hero styles ==========
 
 .hero-main-area {
-  height: calc(100vh - 100px);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
   .hero-bg-shadow-left {
     position: absolute;
     z-index: -1;
@@ -22,7 +26,7 @@
       letter-spacing: 0.36px;
       margin-bottom: 0;
       span {
-        color: #2ec2f1;
+        color: #f64749;
         &.text-color-bangladesh {
           background: linear-gradient(
             162deg,
@@ -33,7 +37,7 @@
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-family: General Sans;
+
           font-size: 24px;
           font-style: normal;
           font-weight: 500;
@@ -43,9 +47,11 @@
       }
     }
     h1 {
-      font-size: 90px;
-      font-weight: 700;
+      font-size: 84px;
       line-height: 135%;
+      @media (max-width: 1200px) {
+        font-size: 60px;
+      }
       &.curious-title {
         position: relative;
         z-index: 2;
@@ -62,6 +68,12 @@
           z-index: -1;
           width: 70px;
           height: 70px;
+          @media (max-width: 1200px) {
+            width: 60px;
+            height: 60px;
+            top: -20px;
+            margin-left: -20px;
+          }
         }
       }
       svg.icon-bottom-right {
@@ -77,17 +89,25 @@
           top: 23px;
           left: -10px;
           width: 84px;
+          @media (max-width: 1200px) {
+            top: -5px;
+            left: -6px;
+            width: 60px;
+          }
         }
       }
     }
     p.hero-left-bottom-color-info {
       color: #141414;
-      font-family: General Sans;
+
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
       letter-spacing: 0.36px;
+      span {
+        color: #2ec2f1;
+      }
     }
   }
   .hero-right-content {
@@ -118,6 +138,7 @@
           font-weight: 500;
           line-height: normal;
           letter-spacing: 0.21px;
+          font-family: "GeneralSans-Medium";
         }
         ul {
           display: flex;
@@ -169,21 +190,36 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .service-single-item {
+          h4 {
+            font-family: "GeneralSans-Semibold";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.48px;
+            text-transform: capitalize;
+            @media (max-width: 1200px) {
+              font-size: 22px;
+            }
+          }
+        }
       }
     }
   }
 }
 //================= Gallery =============
 .gallery-full-area {
+  margin: 80px 0;
   .gallery-inner-container {
     .gallery-header {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       .gallery-header-top {
         a {
           display: inline-flex;
           align-items: center;
           text-decoration: none;
-          font-family: General Sans;
+          margin-bottom: 20px;
           font-size: 24px;
           font-style: normal;
           font-weight: 600;
@@ -194,12 +230,17 @@
         text-align: center;
         h3 {
           color: #141414;
-          font-size: 96px;
+          font-size: 80px;
           font-style: normal;
-          font-weight: 700;
-          line-height: 125%; /* 120px */
+          font-weight: 600;
+          line-height: 125%;
           letter-spacing: 1.44px;
           text-transform: capitalize;
+          margin-bottom: 20px;
+          @media (max-width: 1200px) {
+            font-size: 60px;
+            margin-bottom: 14px;
+          }
           svg {
             position: relative;
             transform: rotate(47deg);
@@ -218,11 +259,14 @@
           font-weight: 500;
           line-height: 150%; /* 36px */
           letter-spacing: 0.36px;
+          @media (max-width: 1200px) {
+            font-size: 20px;
+          }
           span.gallery-color-text-sub-title {
             font-family: "Amsterdam one";
             color: rgb(46, 194, 241);
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
           }
         }
       }
@@ -237,13 +281,16 @@
           border-radius: 8px;
         }
         .g-card-bottom-area {
-          margin-top: 20px;
+          margin-top: 30px;
+          margin-bottom: 20px;
           h4 {
+            font-family: "GeneralSans-Semibold";
             font-size: 32px;
             font-style: normal;
             font-weight: 600;
-            line-height: 125%; /* 40px */
+            line-height: normal;
             letter-spacing: 0.48px;
+            text-transform: capitalize;
           }
           p {
             font-size: 20px;
@@ -285,11 +332,145 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          font-family: "GeneralSans-Semibold";
           svg {
             width: 26px;
             height: 26px;
             position: relative;
             top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//================= Writing styles============
+.writing-full-area {
+  margin: 80px 0;
+  .writing-inner-container {
+    .writing-header-area {
+      text-align: center;
+      margin-bottom: 60px;
+      h2 {
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+        letter-spacing: 1.44px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        @media (max-width: 1200px) {
+          font-size: 60px;
+          margin-bottom: 14px;
+        }
+        svg {
+          margin-left: -51px;
+          position: relative;
+          top: -20px;
+        }
+      }
+      p {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 36px */
+        letter-spacing: 0.36px;
+        text-transform: capitalize;
+        @media (max-width: 1200px) {
+          font-size: 20px;
+        }
+      }
+    }
+    .writing-card-area-wrap {
+      display: flex;
+      gap: 14px;
+      justify-content: space-between;
+      .writing-single-card {
+        width: 24%;
+        height: 360px;
+        flex-shrink: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        border-radius: 14px;
+        h4 {
+          font-size: 28px;
+          font-family: "GeneralSans-Semibold";
+
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 0.48px;
+          text-transform: capitalize;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%; /* 30px */
+          letter-spacing: 0.3px;
+          text-transform: capitalize;
+          text-decoration: none;
+          font-family: "GeneralSans-Semibold";
+          svg {
+            position: relative;
+            top: 3px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+        &.w-card-1 {
+          background: #ffe3e6;
+          transform: rotate(-1.725deg);
+          a {
+            color: #f64749;
+            svg {
+              path {
+                fill: #f64749;
+              }
+            }
+          }
+        }
+        &.w-card-2 {
+          background: #e1faed;
+          transform: rotate(1.575deg);
+          a {
+            color: #39771d;
+            svg {
+              path {
+                fill: #39771d;
+              }
+            }
+          }
+        }
+        &.w-card-3 {
+          background: #f1e6b8;
+          transform: rotate(-1.899deg);
+          a {
+            color: #ea9404;
+            svg {
+              path {
+                fill: #ea9404;
+              }
+            }
+          }
+        }
+        &.w-card-4 {
+          background: #ebeaff;
+          transform: rotate(2.295deg);
+          a {
+            color: #a19cff;
+            svg {
+              path {
+                fill: #a19cff;
+              }
+            }
           }
         }
       }

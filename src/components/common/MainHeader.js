@@ -7,12 +7,17 @@ import MediumIcon from "@/assets/icons/social/MediumIcon";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import logo from "../../assets/image/logo.png";
 const MainHeader = () => {
   const router = useRouter();
-
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
+  }, []);
   // menu active function
   const isLinkActive = (href) => {
     return router.pathname === href;
@@ -21,9 +26,9 @@ const MainHeader = () => {
   const handleMenuToggle = () => {
     setMenu(!menu);
   };
-
+  console.log(scroll);
   return (
-    <div className="main-header">
+    <div className={scroll ? "main-header active-header" : "main-header"}>
       <Container>
         <div className="header-inner-container">
           {/* header logo */}
@@ -40,7 +45,10 @@ const MainHeader = () => {
             </div>
             {/* menu button  */}
             <div className="header-menu-area-wrap">
-              <button onClick={handleMenuToggle}>
+              <button
+                onClick={handleMenuToggle}
+                className={`${menu ? "close-show-btn" : ""}`}
+              >
                 <div className={`menu-toggle-bar ${menu ? "hide-menu" : ""}`}>
                   <span></span>
                   <span></span>
@@ -65,6 +73,9 @@ const MainHeader = () => {
               <Col lg="4">
                 <div className="header-menu-middle">
                   <ul>
+                    <li>
+                      <a className="active menu-title">Menu</a>
+                    </li>
                     <li>
                       <Link
                         className={isLinkActive("/") ? "active" : ""}
