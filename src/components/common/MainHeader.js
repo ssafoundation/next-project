@@ -33,7 +33,9 @@ const MainHeader = () => {
         <div className="header-inner-container">
           {/* header logo */}
           <div className="header-left-logo">
-            <Image src={logo} alt="" />
+            <Link href="/">
+              <Image src={logo} alt="" />
+            </Link>
           </div>
           {/* header navbar */}
           <div className="header-right-navbar">

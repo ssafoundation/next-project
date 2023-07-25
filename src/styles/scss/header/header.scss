@@ -140,6 +140,10 @@
     padding-top: 150px;
     z-index: 99;
     min-height: 540px;
+    @media (max-width: 767px) {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
     &.show-menu {
       transform: rotateX(0deg);
     }
@@ -162,6 +166,9 @@
       .header-menu-middle {
         display: flex;
         justify-content: center;
+        @media (max-width: 767px) {
+          justify-content: flex-start;
+        }
         ul {
           padding-left: 0;
           list-style: none;
@@ -215,8 +222,15 @@
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
+        @media (max-width: 767px) {
+          justify-content: flex-start;
+          text-align: left;
+          width: 100%;
+          align-items: baseline;
+        }
         > ul {
           list-style: none;
+          padding-left: 0;
           li {
             margin-bottom: 18px;
             &:first-child {
@@ -236,6 +250,9 @@
               font-weight: 500;
               line-height: normal;
               letter-spacing: 0.24px;
+              @media (max-width: 767px) {
+                justify-content: flex-start;
+              }
               svg {
                 path {
                   fill: #f64749;
