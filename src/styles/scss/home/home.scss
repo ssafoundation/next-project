@@ -415,8 +415,15 @@
             font-weight: 400;
             line-height: 150%; /* 30px */
             letter-spacing: 0.3px;
+            font-family: "GeneralSans-Regular";
             @media (max-width: 1024px) {
               font-size: 18px;
+            }
+            @media (max-width: 767px) {
+              font-size: 16px;
+            }
+            @media (max-width: 767px) {
+              font-size: 14px;
             }
           }
           a {
@@ -461,11 +468,38 @@
           align-items: center;
           justify-content: center;
           font-family: "GeneralSans-Semibold";
+          @media (max-width: 991px) {
+            border-radius: 4px;
+            border: 1px solid #f64749;
+            display: inline-flex;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 18px;
+          }
+          @media (max-width: 767px) {
+            font-size: 16px;
+          }
+          @media (max-width: 576px) {
+            font-size: 14px;
+          }
+
           svg {
             width: 26px;
             height: 26px;
             position: relative;
             top: 4px;
+            @media (max-width: 767px) {
+              width: 20px;
+              height: 20px;
+              position: relative;
+              top: 2px;
+            }
+            @media (max-width: 576px) {
+              width: 18px;
+              height: 18px;
+              position: relative;
+              top: 0px;
+            }
           }
         }
       }
@@ -524,6 +558,12 @@
         text-transform: capitalize;
         @media (max-width: 1200px) {
           font-size: 20px;
+        }
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+        @media (max-width: 767px) {
+          font-size: 14px;
         }
       }
     }

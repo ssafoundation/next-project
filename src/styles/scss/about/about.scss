@@ -38,6 +38,9 @@
         width: 100%;
         height: auto;
       }
+      .about-animate-icon {
+        text-align: center;
+      }
       .message-icon {
         text-align: right;
         margin-bottom: 40px;
@@ -86,6 +89,9 @@
       .about-hero-left-items {
         min-height: 500px;
         padding-top: 100px;
+        @media (max-width: 767px) {
+          min-height: 450px;
+        }
         ul {
           padding-left: 0;
           list-style: none;
@@ -94,6 +100,12 @@
           height: auto;
           li {
             margin-bottom: 26px;
+            @media (max-width: 767px) {
+              margin-bottom: 22px;
+            }
+            @media (max-width: 576px) {
+              margin-bottom: 18px;
+            }
             &:nth-child(even) {
               justify-content: flex-end;
             }
@@ -109,7 +121,7 @@
     .about-details-top-content {
       margin-bottom: 40px;
       p {
-        font-size: 32px;
+        font-size: 29px;
         font-style: normal;
         font-weight: 500;
         line-height: 170%;
@@ -128,7 +140,7 @@
       }
     }
     .about-work-info {
-      margin-top: 20px;
+      margin-top: 40px;
       h4 {
         font-size: 36px;
         font-style: normal;
@@ -140,8 +152,10 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        margin-bottom: 20px;
         @media (max-width: 768px) {
           font-size: 28px;
+          margin-bottom: 10px;
           svg {
             width: 24px;
             height: 20px;
@@ -160,10 +174,10 @@
         letter-spacing: 0.36px;
         text-transform: capitalize;
         @media (max-width: 768px) {
-          font-size: 22px;
+          font-size: 20px;
         }
         @media (max-width: 576px) {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
@@ -176,7 +190,7 @@
     .digital-capabilities-wrap {
       margin-bottom: 40px;
       .digital-capabilities-header {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         h3 {
           font-size: 36px;
           font-style: normal;
@@ -220,6 +234,12 @@
             line-height: 135%; /* 27px */
             letter-spacing: 0.3px;
             text-transform: capitalize;
+            @media (max-width: 767px) {
+              font-size: 16px;
+            }
+            @media (max-width: 767px) {
+              font-size: 14px;
+            }
           }
           p {
             text-align: center;
@@ -230,6 +250,12 @@
             letter-spacing: 0.24px;
             text-transform: capitalize;
             font-family: "GeneralSans-Regular";
+            @media (max-width: 767px) {
+              font-size: 16px;
+            }
+            @media (max-width: 767px) {
+              font-size: 14px;
+            }
           }
           .digital-capabilities-single-item {
             width: 200px;
@@ -257,6 +283,12 @@
   overflow: hidden;
   .about-slider-header {
     margin-bottom: 40px;
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
     h3 {
       font-size: 36px;
       font-style: normal;
@@ -302,7 +334,7 @@
       img {
         width: 100%;
         @media (max-width: 767px) {
-          height: 280px;
+          height: 240px;
         }
       }
     }
@@ -320,11 +352,10 @@
       p {
         font-size: 36px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 135%; /* 48.6px */
         letter-spacing: 0.54px;
         text-transform: capitalize;
-        font-family: "GeneralSans-Semibold";
         display: flex;
         justify-content: center;
         align-items: center;
@@ -350,11 +381,10 @@
       a {
         font-size: 36px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 135%; /* 48.6px */
         letter-spacing: 0.54px;
         text-transform: capitalize;
-        font-family: "GeneralSans-Semibold";
         display: flex;
         align-items: center;
         justify-content: center;
