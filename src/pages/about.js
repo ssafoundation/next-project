@@ -4,6 +4,7 @@ import AboutExperience from "@/components/about/AboutExperience";
 import AboutHero from "@/components/about/AboutHero";
 import ExploreShiekhSlider from "@/components/about/ExploreShiekhSlider";
 import PhotographSlider from "@/components/about/PhotographSlider";
+import Writing from "@/components/home/Writing";
 import Layout from "@/components/layout/Layout";
 import Head from "next/head";
 
@@ -34,6 +35,7 @@ const about = () => {
         <ExploreShiekhSlider />
         <PhotographSlider />
         <AboutCallToAction />
+        <Writing />
       </Layout>
     </>
   );
