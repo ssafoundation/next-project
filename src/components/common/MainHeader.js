@@ -64,13 +64,13 @@ const MainHeader = () => {
         <Container>
           <div className="header-navbar-show-area">
             <Row>
-              <Col lg="4">
+              <Col md="4">
                 <div className="header-menu-left">
                   <h4>Nasir Ahmed</h4>
                   <p>Product Designer</p>
                 </div>
               </Col>
-              <Col lg="4">
+              <Col md="4">
                 <div className="header-menu-middle">
                   <ul>
                     <li>
@@ -121,7 +121,7 @@ const MainHeader = () => {
                   </ul>
                 </div>
               </Col>
-              <Col lg="4">
+              <Col md="4">
                 <div className="header-menu-right">
                   <ul>
                     <li>

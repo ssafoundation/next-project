@@ -6,6 +6,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+
   .hero-bg-shadow-left {
     position: absolute;
     z-index: -1;
@@ -18,13 +19,22 @@
     z-index: -1;
   }
   .hero-left-content {
+    @media (max-width: 992px) {
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      // align-items: center;
+      margin-bottom: 30px;
+    }
+
     p {
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
       letter-spacing: 0.36px;
-      margin-bottom: 0;
+      margin-bottom: 14px;
       span {
         color: #f64749;
         &.text-color-bangladesh {
@@ -51,6 +61,9 @@
       line-height: 135%;
       @media (max-width: 1200px) {
         font-size: 60px;
+      }
+      @media (max-width: 992px) {
+        font-size: 48px;
       }
       &.curious-title {
         position: relative;
@@ -86,13 +99,19 @@
         display: inline-block;
         svg {
           position: absolute;
-          top: 23px;
-          left: -10px;
-          width: 84px;
+          position: absolute;
+          top: 15px;
+          left: -8px;
+          width: 76px;
           @media (max-width: 1200px) {
             top: -5px;
             left: -6px;
             width: 60px;
+          }
+          @media (max-width: 992px) {
+            top: -18px;
+            left: -5px;
+            width: 46px;
           }
         }
       }
@@ -117,12 +136,20 @@
     align-items: flex-end;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: 992px) {
+      height: auto;
+      align-items: center;
+      margin-bottom: 40px;
+    }
     > svg {
       position: absolute;
     }
     img {
       width: 100%;
       height: auto;
+      @media (max-width: 992px) {
+        width: 400px;
+      }
     }
     .hero-social-media {
       display: flex;
@@ -174,7 +201,9 @@
   align-items: center;
   width: 100%;
   justify-content: center;
-
+  @media (max-width: 992px) {
+    min-height: 160px;
+  }
   .service-container-outer-wrap {
     background: #fff;
     width: 100%;
@@ -185,6 +214,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 992px) {
+      height: 80px;
+    }
     .service-inner-container {
       .service-items-wrap {
         display: flex;
@@ -199,8 +231,18 @@
             line-height: normal;
             letter-spacing: 0.48px;
             text-transform: capitalize;
+            margin-bottom: 0;
             @media (max-width: 1200px) {
               font-size: 22px;
+            }
+            @media (max-width: 992px) {
+              font-size: 16px;
+            }
+          }
+          @media (max-width: 992px) {
+            svg {
+              width: 26px;
+              height: 26px;
             }
           }
         }
@@ -241,6 +283,10 @@
             font-size: 60px;
             margin-bottom: 14px;
           }
+          @media (max-width: 992px) {
+            font-size: 48px;
+            margin-bottom: 14px;
+          }
           svg {
             position: relative;
             transform: rotate(47deg);
@@ -262,6 +308,9 @@
           @media (max-width: 1200px) {
             font-size: 20px;
           }
+          @media (max-width: 992px) {
+            font-size: 16px;
+          }
           span.gallery-color-text-sub-title {
             font-family: "Amsterdam one";
             color: rgb(46, 194, 241);
@@ -279,6 +328,10 @@
         img {
           width: 100%;
           border-radius: 8px;
+          object-fit: cover;
+          @media (max-width: 1024px) {
+            max-height: 300px;
+          }
         }
         .g-card-bottom-area {
           margin-top: 30px;
@@ -291,6 +344,9 @@
             line-height: normal;
             letter-spacing: 0.48px;
             text-transform: capitalize;
+            @media (max-width: 1024px) {
+              font-size: 26px;
+            }
           }
           p {
             font-size: 20px;
@@ -298,6 +354,9 @@
             font-weight: 400;
             line-height: 150%; /* 30px */
             letter-spacing: 0.3px;
+            @media (max-width: 1024px) {
+              font-size: 18px;
+            }
           }
           a {
             color: #f64749;
@@ -309,11 +368,19 @@
             letter-spacing: 0.36px;
             display: flex;
             align-items: center;
+            @media (max-width: 1024px) {
+              font-size: 18px;
+            }
             svg {
               width: 26px;
               height: 26px;
               position: relative;
               top: 4px;
+              @media (max-width: 1024px) {
+                width: 20px;
+                height: 20px;
+                top: 0px;
+              }
             }
           }
         }
@@ -352,6 +419,9 @@
     .writing-header-area {
       text-align: center;
       margin-bottom: 60px;
+      @media (max-width: 992px) {
+        margin-bottom: 40px;
+      }
       h2 {
         font-size: 80px;
         font-style: normal;
@@ -386,6 +456,15 @@
       display: flex;
       gap: 14px;
       justify-content: space-between;
+      @media (max-width: 992px) {
+        overflow-x: scroll;
+        height: 270px;
+        align-items: center;
+        padding-left: 8px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
       .writing-single-card {
         width: 24%;
         height: 360px;
@@ -396,6 +475,13 @@
         justify-content: center;
         padding: 30px;
         border-radius: 14px;
+        @media (max-width: 1024px) {
+          height: 250px;
+        }
+        @media (max-width: 992px) {
+          height: 250px;
+          width: 250px;
+        }
         h4 {
           font-size: 28px;
           font-family: "GeneralSans-Semibold";
@@ -405,6 +491,9 @@
           line-height: normal;
           letter-spacing: 0.48px;
           text-transform: capitalize;
+          @media (max-width: 1024px) {
+            font-size: 22px;
+          }
         }
         a {
           display: flex;
@@ -418,6 +507,9 @@
           text-transform: capitalize;
           text-decoration: none;
           font-family: "GeneralSans-Semibold";
+          @media (max-width: 1024px) {
+            font-size: 18px;
+          }
           svg {
             position: relative;
             top: 3px;

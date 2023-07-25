@@ -34,7 +34,7 @@ const Gallery = () => {
               {galleryImage.length &&
                 galleryImage.map(
                   ({ image, title, subTitle, link, bgColor }, idx) => (
-                    <Col lg="6" key={idx}>
+                    <Col md="6" key={idx}>
                       <div
                         className="single-gallery-card"
                         style={{ background: `${bgColor}` }}
