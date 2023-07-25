@@ -1,4 +1,5 @@
 const CustomArrow = ({ onClick, direction, currentSlide, slideCount }) => {
+  console.log(currentSlide, slideCount);
   if (direction === "left") {
     if (currentSlide === 0) {
       return null;
@@ -7,6 +8,7 @@ const CustomArrow = ({ onClick, direction, currentSlide, slideCount }) => {
         <button
           onClick={onClick}
           style={{ border: "none", background: "none", padding: "0" }}
+          className="about-slider-prev-btn"
         >
           <svg
             width="60"
@@ -40,15 +42,16 @@ const CustomArrow = ({ onClick, direction, currentSlide, slideCount }) => {
       );
     }
   }
-
+  const slideValue = slideCount - 2;
   if (direction === "right") {
-    if (slideCount - 1 === currentSlide) {
+    if (slideValue - 1 === currentSlide) {
       return null;
     } else {
       return (
         <button
           onClick={onClick}
           style={{ border: "none", background: "none", padding: "0" }}
+          className="about-slider-next-btn"
         >
           <svg
             width="60"

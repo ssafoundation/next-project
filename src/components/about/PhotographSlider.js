@@ -1,18 +1,19 @@
-import RocketIcon from "@/assets/icons/aboutHero/RocketIcon";
+import PhotographyIcon from "@/assets/icons/aboutHero/PhotographyIcon";
 import CustomArrow from "@/utils/CustomArrow";
 import Image from "next/image";
 import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 import slideImage from "../../assets/image/g-1.png";
-const ExploreShiekhSlider = () => {
-  const settings = {
+const PhotographSlider = () => {
+  var settings = {
     dots: false,
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    draggable: false,
+    margin: 10,
+    // rtl: true,
   };
 
   return (
@@ -20,8 +21,8 @@ const ExploreShiekhSlider = () => {
       <Container>
         <div className="about-slider-header">
           <h3>
-            Explore Shiekh
-            <RocketIcon />
+            Photograph
+            <PhotographyIcon />
           </h3>
         </div>
         <div className="about-slider-inner-container">
@@ -56,4 +57,4 @@ const ExploreShiekhSlider = () => {
   );
 };
 
-export default ExploreShiekhSlider;
+export default PhotographSlider;
