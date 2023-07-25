@@ -29,7 +29,9 @@ const AboutDetails = () => {
             </h4>
             <p>
               UX/UI Designer At -{" "}
-              <span className="text-secondary-color">Google</span>
+              <span className="text-secondary-color">
+                <b>Google</b>
+              </span>
             </p>
             <p>
               Joined: November 14 - 2022 to{" "}
@@ -43,7 +45,9 @@ const AboutDetails = () => {
             </h4>
             <p>
               Bsc. Computer Science & Engineering -
-              <span className="text-secondary-color">DU</span>
+              <span className="text-secondary-color">
+                <b> DU</b>
+              </span>
             </p>
             <p>2017 - 2021</p>
           </div>

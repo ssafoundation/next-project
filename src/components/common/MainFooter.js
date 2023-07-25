@@ -51,6 +51,33 @@ const MainFooter = () => {
                 <Image src={shadowImage} alt="" />
                 <Image src={mailImage} alt="" />
               </div>
+              <div className="responsive-mobile-social">
+                <div className="social-media-links">
+                  <p>follow Me On:</p>
+                  <ul>
+                    <li>
+                      <a href="">
+                        <LinkEdinIcon />
+                      </a>
+                    </li>{" "}
+                    <li>
+                      <a href="">
+                        <MediumIcon />
+                      </a>
+                    </li>{" "}
+                    <li>
+                      <a href="">
+                        <BehanceIcon />
+                      </a>
+                    </li>{" "}
+                    <li>
+                      <a href="">
+                        <InstagramIcon />
+                      </a>
+                    </li>{" "}
+                  </ul>
+                </div>
+              </div>
             </Col>
           </Row>
         </div>

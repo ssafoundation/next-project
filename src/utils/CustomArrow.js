@@ -1,5 +1,4 @@
 const CustomArrow = ({ onClick, direction, currentSlide, slideCount }) => {
-  console.log(currentSlide, slideCount);
   if (direction === "left") {
     if (currentSlide === 0) {
       return null;
@@ -17,7 +16,7 @@ const CustomArrow = ({ onClick, direction, currentSlide, slideCount }) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_0_1659)">
+            <g clipPath="url(#clip0_0_1659)">
               <path
                 d="M30 59.0625C13.9492 59.0625 0.9375 46.0508 0.9375 30C0.9375 13.9492 13.9492 0.9375 30 0.9375C46.0508 0.9375 59.0625 13.9492 59.0625 30C59.0625 46.0508 46.0508 59.0625 30 59.0625Z"
                 fill="#F64749"
@@ -60,7 +59,7 @@ const CustomArrow = ({ onClick, direction, currentSlide, slideCount }) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_0_1736)">
+            <g clipPath="url(#clip0_0_1736)">
               <path
                 d="M30 59.0625C46.0508 59.0625 59.0625 46.0508 59.0625 30C59.0625 13.9492 46.0508 0.9375 30 0.9375C13.9492 0.9375 0.9375 13.9492 0.9375 30C0.9375 46.0508 13.9492 59.0625 30 59.0625Z"
                 fill="#F64749"

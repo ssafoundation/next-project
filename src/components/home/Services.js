@@ -11,31 +11,31 @@ const Services = () => {
         <Container>
           <div className="service-inner-container">
             <div className="service-items-wrap">
-              <div className="service-single-item">
+              <div className="service-single-item content-box">
                 <h4>Product Design</h4>
               </div>
               <div className="service-single-item">
                 <PlusIcon />
               </div>
-              <div className="service-single-item">
+              <div className="service-single-item content-box">
                 <h4>App Design</h4>
               </div>
               <div className="service-single-item">
                 <PlusIcon />
               </div>
-              <div className="service-single-item">
+              <div className="service-single-item content-box">
                 <h4>Web Design</h4>
               </div>
               <div className="service-single-item">
                 <PlusIcon />
               </div>
-              <div className="service-single-item">
+              <div className="service-single-item content-box">
                 <h4>Strategy</h4>
               </div>
               <div className="service-single-item">
                 <PlusIcon />
               </div>
-              <div className="service-single-item">
+              <div className="service-single-item content-box">
                 <h4>Dashboard</h4>
               </div>
             </div>

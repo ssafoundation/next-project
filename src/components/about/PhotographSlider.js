@@ -5,15 +5,25 @@ import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 import slideImage from "../../assets/image/g-1.png";
 const PhotographSlider = () => {
-  var settings = {
+  const settings = {
     dots: false,
     arrows: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    margin: 10,
-    // rtl: true,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          draggable: true,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (

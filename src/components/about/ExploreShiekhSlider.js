@@ -13,6 +13,17 @@ const ExploreShiekhSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     draggable: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          draggable: true,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (

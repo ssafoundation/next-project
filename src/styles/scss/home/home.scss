@@ -20,7 +20,7 @@
   }
   .hero-left-content {
     @media (max-width: 992px) {
-      min-height: 440px;
+      min-height: 500px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -60,10 +60,13 @@
       font-size: 84px;
       line-height: 135%;
       @media (max-width: 1200px) {
-        font-size: 60px;
+        font-size: 70px;
       }
       @media (max-width: 992px) {
-        font-size: 48px;
+        font-size: 54px;
+      }
+      @media (max-width: 768px) {
+        font-size: 44px;
       }
       &.curious-title {
         position: relative;
@@ -87,12 +90,21 @@
             top: -20px;
             margin-left: -20px;
           }
+          @media (max-width: 768px) {
+            width: 50px;
+            height: 50px;
+            top: -20px;
+            margin-left: -20px;
+          }
         }
       }
       svg.icon-bottom-right {
         height: 64px;
         position: relative;
         bottom: 8px;
+        @media (max-width: 768px) {
+          height: 54px;
+        }
       }
       span.hero-research-emoji {
         position: relative;
@@ -154,10 +166,16 @@
     .hero-social-media {
       display: flex;
       justify-content: flex-end;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
       .social-media-links {
         display: flex;
         align-items: flex-end;
         gap: 8px;
+        @media (max-width: 991px) {
+          display: none;
+        }
         p {
           margin-bottom: 0;
           font-size: 14px;
@@ -185,6 +203,16 @@
               }
             }
           }
+        }
+      }
+      .message-icon {
+        display: none;
+        @media (max-width: 991px) {
+          display: block;
+        }
+        a img {
+          width: 70px;
+          height: 70px;
         }
       }
     }
@@ -222,7 +250,19 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
         .service-single-item {
+          &.content-box {
+            @media (max-width: 992px) {
+              h4 {
+                width: 130px;
+                text-align: center;
+              }
+            }
+          }
           h4 {
             font-family: "GeneralSans-Semibold";
             font-size: 32px;
@@ -287,11 +327,21 @@
             font-size: 48px;
             margin-bottom: 14px;
           }
+          @media (max-width: 767px) {
+            font-size: 40px;
+            margin-bottom: 14px;
+          }
           svg {
             position: relative;
             transform: rotate(47deg);
             margin-right: -24px;
             margin-top: -74px;
+            @media (max-width: 576px) {
+              margin-right: -17px;
+              margin-top: -44px;
+              width: 30px;
+              height: 30px;
+            }
             path {
               fill: rgba(233, 202, 28, 1);
             }
@@ -311,6 +361,11 @@
           @media (max-width: 992px) {
             font-size: 16px;
           }
+          @media (max-width: 768px) {
+            br {
+              display: none;
+            }
+          }
           span.gallery-color-text-sub-title {
             font-family: "Amsterdam one";
             color: rgb(46, 194, 241);
@@ -325,12 +380,18 @@
         padding: 30px;
         border-radius: 8px;
         margin-bottom: 24px;
+        @media (max-width: 576px) {
+          padding: 20px;
+        }
         img {
           width: 100%;
           border-radius: 8px;
           object-fit: cover;
           @media (max-width: 1024px) {
             max-height: 300px;
+          }
+          @media (max-width: 576px) {
+            max-height: 220px;
           }
         }
         .g-card-bottom-area {
@@ -434,10 +495,24 @@
           font-size: 60px;
           margin-bottom: 14px;
         }
+        @media (max-width: 992px) {
+          font-size: 48px;
+          margin-bottom: 14px;
+        }
+        @media (max-width: 767px) {
+          font-size: 40px;
+          margin-bottom: 14px;
+        }
         svg {
           margin-left: -51px;
           position: relative;
           top: -20px;
+          @media (max-width: 576px) {
+            margin-left: -26px;
+            top: -15px;
+            width: 30px;
+            height: 30px;
+          }
         }
       }
       p {

@@ -26,7 +26,7 @@ const MainHeader = () => {
   const handleMenuToggle = () => {
     setMenu(!menu);
   };
-  console.log(scroll);
+
   return (
     <div className={scroll ? "main-header active-header" : "main-header"}>
       <Container>

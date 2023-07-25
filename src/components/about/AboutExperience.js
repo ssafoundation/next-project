@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Container } from "react-bootstrap";
 import imageUx from "../../assets/image/about/Certificate/ux.png";
 const AboutExperience = () => {
-  console.log(digitalCapabilities);
   return (
     <div className="about-experience-full-area">
       <Container>
@@ -23,7 +22,10 @@ const AboutExperience = () => {
             <div className="digital-capabilities">
               {digitalCapabilities?.length &&
                 digitalCapabilities?.map(({ image, title, bgColor }, idx) => (
-                  <div className="digital-capabilities-single-item-wrap">
+                  <div
+                    className="digital-capabilities-single-item-wrap"
+                    key={idx}
+                  >
                     <div
                       className="digital-capabilities-single-item"
                       style={{ backgroundColor: `${bgColor}` }}
@@ -66,7 +68,10 @@ const AboutExperience = () => {
             <div className="digital-capabilities">
               {funFact?.length &&
                 funFact?.map(({ image, title, bgColor, content }, idx) => (
-                  <div className="digital-capabilities-single-item-wrap">
+                  <div
+                    className="digital-capabilities-single-item-wrap"
+                    key={idx}
+                  >
                     <div
                       className="digital-capabilities-single-item"
                       style={{ backgroundColor: `${bgColor}` }}

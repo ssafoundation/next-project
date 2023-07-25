@@ -10,6 +10,7 @@ import BgShadow from "@/assets/image/bg-shadow/BgShadow";
 import BgShadowRight from "@/assets/image/bg-shadow/BgShadowRight";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
+import messageImage from "../../assets/image/footer/mail-image.svg";
 import rightImage from "../../assets/image/heroRightImage.png";
 const Hero = () => {
   return (
@@ -52,6 +53,11 @@ const Hero = () => {
               <div className="hero-right-content">
                 <Image src={rightImage} alt="" />
                 <div className="hero-social-media">
+                  <div className="message-icon">
+                    <a href="mailto:shikh001@gmail.com">
+                      <Image src={messageImage} alt="" />
+                    </a>
+                  </div>
                   <div className="social-media-links">
                     <p>follow Me On:</p>
                     <ul>

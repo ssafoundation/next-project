@@ -11,12 +11,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import aboutImage from "../../assets/image/heroRightImage.png";
 const AboutMobileHero = () => {
   return (
-    <div className="hero-main-area">
+    <div className="hero-main-area ">
       <div className="hero-bg-shadow-left">
         <BgShadow />
       </div>
       <Container>
-        <div className="hero-inner-container">
+        <div className="hero-inner-container responsive-about-hero">
           <Row className="g-0">
             <Col lg="12">
               <div className="about-hero-left-items">

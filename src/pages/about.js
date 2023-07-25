@@ -2,13 +2,17 @@ import AboutCallToAction from "@/components/about/AboutCallToAction";
 import AboutDetails from "@/components/about/AboutDetails";
 import AboutExperience from "@/components/about/AboutExperience";
 import AboutHero from "@/components/about/AboutHero";
+import AboutMobileHero from "@/components/about/AboutMobileHero";
 import ExploreShiekhSlider from "@/components/about/ExploreShiekhSlider";
 import PhotographSlider from "@/components/about/PhotographSlider";
 import Writing from "@/components/home/Writing";
 import Layout from "@/components/layout/Layout";
+import useResolution from "@/utils/useResolution";
 import Head from "next/head";
 
 const about = () => {
+  const { width } = useResolution();
+  console.log(width);
   return (
     <>
       <Head>
@@ -29,7 +33,7 @@ const about = () => {
         />
       </Head>
       <Layout>
-        <AboutHero />
+        {width <= 991 ? <AboutMobileHero /> : <AboutHero />}
         <AboutDetails />
         <AboutExperience />
         <ExploreShiekhSlider />
