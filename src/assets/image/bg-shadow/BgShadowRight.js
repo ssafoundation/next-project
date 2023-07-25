@@ -24,9 +24,9 @@ const BgShadowRight = () => {
           width="1492"
           height="1495"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -46,9 +46,9 @@ const BgShadowRight = () => {
           y2="981"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F64749" />
-          <stop offset="0.515625" stop-color="#F9AF0B" />
-          <stop offset="1" stop-color="#2EC2F1" />
+          <stop stopColor="#F64749" />
+          <stop offset="0.515625" stopColor="#F9AF0B" />
+          <stop offset="1" stopColor="#2EC2F1" />
         </linearGradient>
       </defs>
     </svg>
