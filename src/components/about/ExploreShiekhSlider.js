@@ -1,23 +1,19 @@
+import CustomArrow from "@/utils/CustomArrow";
+import Image from "next/image";
 import { Container } from "react-bootstrap";
 import Slider from "react-slick";
-
+import slideImage from "../../assets/image/g-1.png";
 const ExploreShiekhSlider = () => {
   var settings = {
     dots: true,
     arrows: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    margin: 10,
   };
-  const CustomArrow = ({ onClick, direction, currentSlide, slideCount }) => {
-    console.log(direction, currentSlide, slideCount);
-    if (currentSlide === 0) {
-      return <button onClick={onClick}>Prev </button>;
-    } else if (currentSlide === slideCount - 1) {
-      return <button onClick={onClick}>Next </button>;
-    }
-  };
+
   return (
     <div className="about-slider-wrap">
       <Container>
@@ -27,24 +23,11 @@ const ExploreShiekhSlider = () => {
             prevArrow={<CustomArrow direction="left" />}
             nextArrow={<CustomArrow direction="right" />}
           >
-            <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
+            {[...Array(6)].map((slide, idx) => (
+              <div className="about-slider-single-item">
+                <Image src={slideImage} alt="" />
+              </div>
+            ))}
           </Slider>
         </div>
       </Container>

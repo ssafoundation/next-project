@@ -153,3 +153,26 @@
     }
   }
 }
+//=================
+
+.about-slider-wrap {
+  .about-slider-inner-container {
+    .slick-track > *:first-child {
+      img {
+        border-radius: 20px 0px 0px 20px !important;
+      }
+    }
+
+    .slick-list {
+      margin: 0 -10px;
+    }
+    .slick-slide > div {
+      padding: 0 10px;
+    }
+    .about-slider-single-item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
