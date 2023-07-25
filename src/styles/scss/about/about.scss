@@ -38,6 +38,16 @@
         width: 100%;
         height: auto;
       }
+      .message-icon {
+        text-align: right;
+        margin-bottom: 40px;
+        a {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
     }
     .about-hero-right-items {
       height: 100%;

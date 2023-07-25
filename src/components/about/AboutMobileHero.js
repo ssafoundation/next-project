@@ -8,6 +8,7 @@ import BgShadow from "@/assets/image/bg-shadow/BgShadow";
 import BgShadowRight from "@/assets/image/bg-shadow/BgShadowRight";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
+import messageImage from "../../assets/image/footer/mail-image.svg";
 import aboutImage from "../../assets/image/heroRightImage.png";
 const AboutMobileHero = () => {
   return (
@@ -52,6 +53,11 @@ const AboutMobileHero = () => {
             <Col lg="12">
               <div className="about-hero-middle-items">
                 <Image src={aboutImage} alt="" />
+                <div className="message-icon">
+                  <a href="mailto:shikh001@gmail.com">
+                    <Image src={messageImage} alt="" />
+                  </a>
+                </div>
               </div>
             </Col>
           </Row>
