@@ -46,9 +46,9 @@ const BgShadow = () => {
           y2="695"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F64749" />
-          <stop offset="0.515625" stop-color="#F9AF0B" />
-          <stop offset="1" stop-color="#2EC2F1" />
+          <stop stopColor="#F64749" />
+          <stop offset="0.515625" stopColor="#F9AF0B" />
+          <stop offset="1" stopColor="#2EC2F1" />
         </linearGradient>
       </defs>
     </svg>
